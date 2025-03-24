@@ -77,7 +77,7 @@ luxury_house_instance.display_luxury_attributes()
 
 print("\nUpdating House Attributes:")
 house_instance.update_price(260000)
-house_instance.update_street("Maple Street")
+house_instance.update_street("Apple Street")
 house_instance.display_attributes()
 
 print("\nUpdating Luxury House Attributes:")

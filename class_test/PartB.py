@@ -7,9 +7,8 @@ class TestHouse(unittest.TestCase):
         house = House(42, "Elm Street", "Suburb", 3, 250000)
         self.assertIsInstance(house, House)
 
-
     def test_not_instance_of_class(self):
-        luxury_house = LuxuryHouse(99, "Oak Avenue", "City Center", 5, 1000000, True, 3)
+        luxury_house = LuxuryHouse(99, "Oak Avenue", "Suburb", 5, 1000000, True, 3)
         self.assertNotIsInstance(luxury_house, int)
 
     def test_objects_identical(self):
@@ -18,8 +17,8 @@ class TestHouse(unittest.TestCase):
         self.assertIs(house1, house2)
 
     def test_objects_not_identical(self):
-        house1 = House(42, "Elm Street", "Suburb", 3, 250000)
-        house2 = House(42, "Elm Street", "Suburb", 3, 250000)
+        house1 = House(42, "Beef Street", "Suburb", 2, 250000)
+        house2 = House(42, "Beef Street", "Suburb", 2, 250000)
         self.assertIsNot(house1, house2)
 
     def test_update_house_number(self):
@@ -40,12 +39,12 @@ class TestHouse(unittest.TestCase):
 class TestLuxuryHouse(unittest.TestCase):
 
     def test_update_swimming_pool(self):
-        luxury_house = LuxuryHouse(99, "Green Avenue", "City Center", 5, 1000000, True, 3)
+        luxury_house = LuxuryHouse(99, "Green Avenue", "Suburb", 5, 1000000, True, 3)
         luxury_house.update_swimming_pool(False)
         self.assertFalse(luxury_house.swimming_pool)
 
     def test_update_garage_capacity(self):
-        luxury_house = LuxuryHouse(99, "Green Avenue", "City Center", 5, 1000000, True, 3)
+        luxury_house = LuxuryHouse(99, "Green Avenue", "Suburb", 5, 1000000, True, 3)
         luxury_house.update_garage_capacity(4)
         self.assertEqual(luxury_house.garage_capacity, 4)
 
