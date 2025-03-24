@@ -17,7 +17,7 @@ class House:
         if isinstance(new_house_number, int):
             self.house_number = new_house_number
         else:
-            print("Invalid type for house number. Must be an integer.")
+            print("Invalid type for house number. Should be an integer.")
 
     def update_street(self, new_street):
         if isinstance(new_street, str):
@@ -35,13 +35,13 @@ class House:
         if isinstance(new_number_of_beds, int):
             self.number_of_beds = new_number_of_beds
         else:
-            print("Invalid type for number of beds. Must be an integer.")
+            print("Invalid type for number of beds. Should be an integer.")
 
     def update_price(self, new_price):
         if isinstance(new_price, (int, float)):
             self.price = new_price
         else:
-            print("Invalid type for price. Must be a number.")
+            print("Invalid type for price. Should be a number.")
 
 class LuxuryHouse(House):
     def __init__(self, house_number, street, area, number_of_beds, price, swimming_pool, garage_capacity):
@@ -58,13 +58,13 @@ class LuxuryHouse(House):
         if isinstance(new_swimming_pool, bool):
             self.swimming_pool = new_swimming_pool
         else:
-            print("Invalid type for swimming pool. Must be a boolean (True/False).")
+            print("Invalid type for swimming pool. Should be a boolean.")
 
     def update_garage_capacity(self, new_garage_capacity):
         if isinstance(new_garage_capacity, int):
             self.garage_capacity = new_garage_capacity
         else:
-            print("Invalid type for garage capacity. Must be an integer.")
+            print("Invalid type for garage capacity. Should be an integer.")
 
 house_instance = House(42, "Elm Street", "Suburb", 3, 250000)
 luxury_house_instance = LuxuryHouse(99, "Oak Avenue", "City Center", 5, 1000000, True, 3)
